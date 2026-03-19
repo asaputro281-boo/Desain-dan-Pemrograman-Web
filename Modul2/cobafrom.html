@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title> Form Sederhana</title>
+    <link rel="icon" type="img/png" href="gambar/icon.png" sizes="16x16"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+    <form action="/action_page.php">
+        <label for="depan"> Nama Depan:</label><br>
+        <input type="text" id="depan" name="i_name" value="Angga"><br>
+        <label for="n_belakang"> Nama Belakang:</label><br>
+        <input type="text" id="n_belakang" name="i_belakan" value="Saputro"><br>
+        <input type="submit" value="Kirim">
+        <input type="reset" value="Reset">
+    </form>
+    <p> jik anda menekan tombol "Kirim", data formulir akan dikirim ke halaman bernama
+        "/action_page.php"
+    </p>
+</body>
+</html>
+<p>
+    Kesimpulan :
+    Form ini otommatis pakai cara get dan tampil ditab yang sama. Jadi data yang dikirim bakal kelihatan URL. 
+    Tombol reset mengembalikan isi form ke awal.
+</p>
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title> Form Sederhana</title>
+    <link rel="icon" type="img/png" href="gambar/icon.png" sizes="16x16"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+    <h3> Target isi dengan self</h3>
+    <form action="/action_page.php" method="get" target="_self">
+        <label for="depan"> Nama Depan:</label><br>
+        <input type="text" id="depan" name="i_name" value="Angga"><br>
+        <label for="n_belakang"> Nama Belakang:</label><br>
+        <input type="text" id="n_belakang" name="i_belakan" value="Saputro"><br>
+        <input type="submit" value="Kirim">
+        <input type="reset" value="Reset">
+    </form>
+    <p> 
+        jika anda menekan tombol "Kirim", data formulir akan dikirim ke halaman bernama
+        "/action_page.php"
+    </p>
+</body>
+</html>
+
+<p> 
+    Kesimpulan :
+    pada saat menggunakan GET dan hasilnya muncul ditab yang sama. Data gampang kelihatan di address bar
+</p>
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title> Form Sederhana</title>
+    <link rel="icon" type="img/png" href="gambar/icon.png" sizes="16x16"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+    <h3> Target isi dengan blank</h3>
+    <form action="/action_page.php" method="post" target="_blank">
+        <label for="depan"> Nama Depan:</label><br>
+        <input type="text" id="depan" name="i_name" value="Angga"><br>
+        <label for="n_belakang"> Nama Belakang:</label><br>
+        <input type="text" id="n_belakang" name="i_belakan" value="Saputro"><br>
+        <input type="submit" value="Kirim">
+        <input type="reset" value="Reset">
+    </form>
+    <p> jik anda menekan tombol "Kirim", data formulir akan dikirim ke halaman bernama
+        "/action_page.php"
+    </p>
+</body>
+</html>
+<p>
+    Kesimpulan : 
+    menggunakan methode post dan target blank jadi data tidak kelihatan di URL. hasilnya akan terbuka ditab baru, sementara form lama tetap ada. lebih aman buat data pribadi
+</p>
