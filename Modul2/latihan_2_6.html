@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title> Image map</title>
+    <link rel="icon" type="img/png" href="gambar/icon.png" sizes="16x16"/>
+    <meta name="viewport" content="width=device-width, initial-scale">
+    <link rel='stylesheet' href='css/main.css'>
+
+</head>    
+<body>
+    <div id="header">
+        <h1> UJI COBA IMAGE MAP</h1>
+    </div>
+    <div id="link"> 
+        <li><a href="gambar/gambar5.jpg">Home</a></li><br>
+        <li><a href="gambar/gambar6.jpeg">Tentang Saya</a></li><br>
+        <li><a href="gambar/gambar7.jpg">Kontak Mobil</a></li>
+    </div>
+    <div id="content">
+
+        <h2>Klik pada bagian gambar:</h2>
+
+        <img src="https://www.w3schools.com/html/workplace.jpg" 
+             alt="Workplace" 
+             usemap="#workmap"
+             width="400">
+
+       <map name="workmap">
+            <area shape="react" coords="34,44,270,350" alt="Computer" href="https://en.wikipedia.org/wiki/computer">
+            <area shape="react" coords="290,172,333,250" alt="Phone" href="https://en.wikipedia.org/wiki/Telephone">
+            <area shape="react" coords="337,300,44" alt="Coffee" href="https://en.wikipedia.org/wiki/Coffee">
+       </map>
+    </div>
+
+    <div id="footer">
+        <p><i> copyright@Angga Saputro_253307019 2026</i></p>
+    </div>
+</body>
+</html>
