@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="id">
+ 
+<head>
+    <title>Halaman SVG</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Data Mahasiswa -->
+    <meta name="author" content="Angga Saputro">
+    <meta name="nim" content="253307019">
+
+    <!-- Meta -->
+    <meta name="description" content="Website praktikum HTML5 Lanjut">
+    <meta name="keywords" content="HTML5, Form, Audio, Video, SVG, Canvas">
+
+    <style>
+         * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            margin: 10;
+        }
+
+       /* HEADER */
+        header {
+            background-color: #44758e;
+            padding: 20px;
+            text-align: center;
+            font-size: 30px;
+            color: white;
+        }
+
+
+        /* NAVIGATION */
+        nav {
+            float: left;
+            width: 30%;
+            height: 195px;
+            /* hanya untuk demo */
+            background: #ccc;
+            padding: 20px;
+        }
+
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        nav ul li {
+            margin-bottom: 1px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: black;
+            font-weight:normal;
+        }
+
+        /* ARTICLE */
+        article {
+            float: left;
+            padding: 20px;
+            width: 70%;
+            background-color: #f1f1f1;
+            height: 660px;
+        }
+
+        /* IMAGE */
+        img {
+            background-color: rgb(223, 111, 206);
+            padding: 10px;
+            text-align: center;
+            color: white;
+            width: 300px;
+            height: 220px;
+            object-fit: cover;
+        }
+
+        /* CLEAR FLOAT */
+        section::after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+        /* FOOTER */
+        footer {
+            background-color:#44758e;
+            padding: 10px;
+            text-align: center;
+            color: white;
+        }
+
+        /* RESPONSIVE */
+        @media (max-width: 800px) {
+
+            nav,
+            article {
+                width: 100%;
+                height: auto;
+            }
+        }
+    </style>
+
+</head>
+<body>
+    <header>
+        <h2>SVG LittleJoys Pics</h2>
+    </header>
+    <section>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="gambar.html">Gambar</a></li>
+                <li><a href="event.html">Event</a></li>
+                <li><a href="audio.html">Audio</a></li>
+                <li><a href="video.html">Video</a></li>
+                <li><a href="svg.html">SVG</a></li>
+                <li><a href="canvas.html">Canvas</a></li>
+                <li><a href="pendaftaran.html">Pendaftaran</a></li>
+            </ul>
+        </nav>
+        
+        <article>
+            <h1>SVG</h1>
+
+            <!--SVG Pertama-->
+             <svg width="300" height="200">
+                <circle cx="100" cy="100" r="50" stroke="black" stroke-width="3" fill="blue" />
+                <polygon points="200,10 250,190 160,210" style="fill:lime;stroke:purple;stroke-width:2" />
+            </svg>
+
+            <br><br>
+
+             <!-- SVG Lingkaran -->
+            <svg width="188" height="180">
+                <circle cx="50" cy="50" r="48" stroke="green" stroke-width="4" fill="yellow" />
+            </svg>
+
+            <br><br>
+
+             <!-- SVG Persegi -->
+            <svg width="100" height="100">
+                <rect width="100" height="100"
+                    style="fill:rgb(8,8,255);stroke-width:5;stroke:rgb(8,8,8)" />
+            </svg>
+
+            <br><br>
+
+        </article>
+    </section>
+    <footer>
+        <p>&copy; 2026 - Praktikum HTML5 | Angga Saputro</p>
+    </footer>
+</body>
+</html>
