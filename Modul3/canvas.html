@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <title>Halaman Canvas</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Data -->
+    <meta name="author" content="Angga Saputro">
+    <meta name="nim" content="253307019">
+
+    <!-- Meta -->
+    <meta name="description" content="Website praktikum HTML5 Lanjut">
+    <meta name="keywords" content="HTML5, Form, Audio, Video, SVG, Canvas">
+
+    <style>
+       * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            margin: 10;
+        }
+
+        header {
+            background-color: #44758e;
+            padding: 20px;
+            text-align: center;
+            font-size: 30px;
+            color: white;
+        }
+
+        /* NAVIGATION */
+        nav {
+            float: left;
+            width: 30%;
+            height: 195px;
+            /* hanya untuk demo */
+            background: #ccc;
+            padding: 20px;
+        }
+
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        nav ul li {
+            margin-bottom: 1px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: black;
+            font-weight: normal;
+        }
+
+        /* ARTICLE */
+        article {
+            float: left;
+            padding: 20px;
+            width: 70%;
+            background-color: #f1f1f1;
+            height: 660px;
+            /* hanya untuk demo */
+        }
+
+        /* CLEAR FLOAT */
+        section::after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+        /* FOOTER */
+        footer {
+            background-color: #44758e;
+            padding: 10px;
+            text-align: center;
+            color: white;
+        }
+
+        /* RESPONSIVE */
+        @media (max-width: 600px) {
+
+            nav,
+            article {
+                width: 100%;
+                height: auto;
+            }
+        }   
+    </style>
+</head>
+<body>
+    <header>
+        <h2>Canvas LittleJoys Pics </h2>
+    </header>
+
+    <section>
+          <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="gambar.html">Gambar</a></li>
+                <li><a href="event.html">Event</a></li>
+                <li><a href="audio.html">Audio</a></li>
+                <li><a href="video.html">Video</a></li>
+                <li><a href="svg.html">SVG</a></li>
+                <li><a href="canvas.html">Canvas</a></li>
+                <li><a href="pendaftaran.html">Pendaftaran</a></li>
+            </ul>
+        </nav>
+    
+        <article>
+        <h1>Canvas</h1>
+
+        <canvas id="canvas" width="400" height="300" style="background-color:#44758e"></canvas>
+
+        <script src="main.js" <script>
+        </script>
+        <p><b>Kesimpulan Hasil Ujicoba:</b><br>
+        Canvas pada HTML5 digunakan untuk menggambar berbagai objek grafis secara dinamis menggunakan JavaScript. 
+        Berbeda dengan SVG yang berbasis vektor, canvas bekerja dengan sistem pixel-based sehingga cocok untuk 
+        membuat animasi, game, grafik interaktif, dan manipulasi gambar secara langsung di dalam browser. 
+        Dengan menggunakan file JavaScript terpisah seperti <i>main.js</i>, kode program menjadi lebih rapi 
+        dan mudah dikelola.</p>
+
+        </article>
+    </section>
+
+    <footer>
+         <p>&copy; 2026 - Praktikum HTML5 | Angga Saputro</p>
+    </footer>
+</body>
+    <script src="main.js"></script>
+</html>
