@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <title>Halaman Beranda</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Ubah sesuai data Anda -->
+    <meta name="author" content="Angga Saputro">
+    <meta name="nim" content="253307019">
+
+    <!-- Melengkapi Meta (Blok Bagian Hijau) -->
+    <meta name="description" content="Website praktikum HTML5 Lanjut">
+    <meta name="keywords" content="HTML5, Form, Audio, Video, SVG, Canvas">
+
+    <!-- Melengkapi Style (Blok Bagian Hijau) -->
+    <style>
+        * {
+            box-sizing:border-box;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            margin: 10; 
+        }
+
+        /* HEADER */
+        header {
+            background-color: #44758e;
+            padding: 20px;
+            text-align: center;
+            font-size: 30px;
+            color: white;
+        }
+
+        /* NAVIGATION */
+        nav {
+            float: left;
+            width: 30%;
+            height: 180px;
+            /* hanya untuk demo */
+            background: #ccc;
+            padding: 20px;
+        }
+
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        nav ul li {
+            margin-bottom: 10px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: black;
+            font-weight: normal;
+        }
+
+        /* ARTICLE */
+        article {
+            float: left;
+            padding: 30px;
+            width: 70%;
+            background-color: #f1f1f1;
+            height: 660px;
+            /* hanya untuk demo */
+        }
+
+        /* CLEAR FLOAT */
+        section::after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+        /* FOOTER */
+        footer {
+            background-color: #44758e;
+            padding: 10px;
+            text-align: center;
+            color: white;
+        }
+
+        /* RESPONSIVE */
+        @media (max-width: 350px) {
+
+            nav,
+            article {
+                width: 100%;
+                height: auto;
+            }
+        }
+    </style>
+</head>
+
+<body>
+<!-- perbedaannya adalah jika sebelum ditambahkan untuk mengisi diblok hijau, tampilan akan terlihat 
+ kosong, sedangkan setelah ditambahkan tampilanya lebih terlihat menarik dan berwarna -->
+
+    <header>
+        <h2>Website LittleJoys Pisc</h2>
+    </header>
+
+    <section>
+
+        <nav>
+            <!-- Melengkapi Navigation Link (Blok Bagian Hijau) -->
+            <li><a href="index.html">Home</a></li>
+            <li><a href="gambar.html">Gambar</a></li>
+            <li><a href="event.html">Event</a></li>
+            <li><a href="audio.html">Audio</a></li>
+            <li><a href="video.html">Video</a></li>
+            <li><a href="svg.html">SVG</a></li>
+            <li><a href="canvas.html">Canvas</a></li>
+            <li><a href="pendaftaran.html">Pendaftaran</a></li>
+        </nav>
+
+        <article>
+            <h1>Artikel LittleJoys</h1>
+            <p>
+                Ini adalah halaman utama praktikum HTML5 Lanjut.
+                Halaman ini menggunakan struktur semantik HTML5 seperti
+                header, section, nav, article, dan footer.
+            </p>
+
+            <p>
+                <b>Kesimpulan Hasil Uji Coba:</b><br>
+                Website ini dibuat dengan struktur HTML (header, navigation, article dan footer).
+                Penggunaan float dan box sizing membantu pengaturan layout, sedangkan media query membuat tampilan responsif di berbagai ukuran layar.
+                Menu navigasi juga memudahkan akses ke berbagai halaman, sehingga website menjadi sederhana, fungsional, dan nyaman digunakan.
+            </p>
+
+            <p>
+                <b>Kesimpulan Hasil Uji Coba:</b><br><br>
+                Praktikum ini belajar penggunaan struktur html seperti header
+                section, navy, article dan footer membuat tampilan website menjadi
+                lebih tersetruktur
+            </p>
+        </article>
+
+    </section>
+
+    <footer>
+        <p>&copy; 2026 - Praktikum HTML5 | Angga Saputro</p>
+    </footer>
+
+</body>
+
+</html>
