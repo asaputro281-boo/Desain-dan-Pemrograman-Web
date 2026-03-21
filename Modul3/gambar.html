@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<hmtl lang="id">
+    <head>
+        <title> Halaman Gambar</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width , initial-scale=1">
+
+        <meta name="author" content="Angga Saputro">
+        <meta name="nim" content="253307019">
+
+        <meta name="description" content=" Website Praktikum HTML5 Lanjut">
+        <meta name="keywords" content="HTML5, Form, Audio, Video, SVG, Canvas">
+
+        <style>
+            *{
+                box-sizing: border-box;
+            }
+
+            body {
+                font-family: Arial, Helvetica, sans-serif;
+                margin: 10;
+            }
+
+            header {
+                background-color:#44758e;
+                padding: 20px;
+                text-align: center;
+                font-size: 30px;
+                color: white;
+            }
+
+            nav {
+                float: left;
+                width: 30;
+                height: 180px;
+
+                background: #ccc;
+                padding: 20px;
+            }
+
+            nav ul {
+                list-style-type: none;
+                padding: 0;
+            }
+
+            nav ul li {
+                margin-bottom: 10px;
+
+            }
+
+            nav ul li a {
+                text-decoration: none;
+                color: black;
+                font-weight: bold;
+            }
+            
+            article {
+                float: left;
+                padding: 80px;
+                width: 70%;
+                background-color: #f1f1f1;
+                height: 660px;
+            }
+
+            img {
+                background-color: #44758e ;
+                padding:  5px;
+                text-align: center;
+                color: white;
+                width: 200px;
+                height: 200px;
+                object-fit:cover;
+            }
+
+            section::after {
+                content: "";
+                display: table;
+                clear: both;
+            }
+            
+            footer {
+                background-color:#44758e;
+                padding: 10px;
+                text-align: center;
+                color:  white;
+
+            }
+
+            @media (max-width : 800px) {
+                navy, 
+                article {
+                    width: 100%;
+                    height: auto;
+                }
+                
+            }
+        </style>
+    </head>
+    <body>
+        <header>
+        <h2> Galeri LittleJoys Pisc</h2>
+        </header> 
+
+    <section>
+
+        <nav>
+           
+            <li><a href="index.html">Home</a></li>
+            <li><a href="gambar.html">Gambar</a></li>
+            <li><a href="event.html">Event</a></li>
+            <li><a href="audio.html">Audio</a></li>
+            <li><a href="video.html">Video</a></li>
+            <li><a href="svg.html">SVG</a></li>
+            <li><a href="canvas.html">Canvas</a></li>
+            <li><a href="pendaftaran.html">Pendaftaran</a></li>
+        </nav>
+
+        <article>
+            <h1>Galeri</h1>
+
+            <img src="gambar/gambar1.jpg">
+            <img src="gambar/gambar2.jpg">
+            <img src="gambar/gambar3.jpg">
+            <img src="gambar/gambar4.jpg">
+            <img src="gambar/gambar5.jpg">
+            <img src="gambar/gambar6.jpg">
+        </article>
+
+    </section>
+
+    <footer>
+        <p>&copy; 2026 - Praktikum HTML5 | Angga Saputro</p>
+    </footer>
+
+    </body>
+</hmtl>
