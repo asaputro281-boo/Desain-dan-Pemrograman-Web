@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<hmtl lang="id">
+
+    <head>
+        <title>Halaman Event</title>
+        
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <meta name="author" content="Angga Saputro">
+        <meta name="nim" content="253307019">
+
+        <meta name="description" content="Website praktikum HTML5 Lanjut">
+        <meta name="keywords" content="HTML5, Form, Audio, Video, SVG, Canvas">
+    
+        <style>
+             * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            margin: 10;
+        }
+
+        header {
+            background-color: #44758e;
+            padding: 20px;
+            text-align: center;
+            font-size: 30px;
+            color: white;
+        }
+
+        nav {
+            float: left;
+            width: 30%;
+            height: 180px;
+            background: #ccc;
+            padding: 20px;
+        }
+
+        nav li {
+            margin-bottom: 1px;
+            list-style: none;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: black;
+            font-weight: normal;
+        }
+
+        article {
+            float: left;
+            padding: 20px;
+            width: 70%;
+            background-color: #f1f1f1;
+        }
+
+        img {
+            width: 300px;
+            height: 300px;
+            object-fit: cover;
+            margin: 10px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        footer {
+            background-color: #44758e;
+            padding: 10px;
+            text-align: center;
+            color: white;
+        }
+
+        section::after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+        @media (max-width: 800px) {
+
+            nav,
+            article {
+                width: 100%;
+            }
+        }
+        </style>
+
+        <script>
+            function klikGambar() {
+                alert("Gambar Diklik!");
+            }
+
+
+            function perbesar(x) {
+                x.style.transform ="scale(1.2)";
+            }
+
+            function normal(x) {
+                x.style.transform = "scale(1)";
+            }
+        </script>
+    </head>
+    <body>
+        <header>
+            <h2>Mouse LittleJoys Pics</h2>
+        </header>
+        <section>
+            <nav>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="gambar.html">Gambar</a></li>
+                <li><a href="event.html">Event</a></li>
+                <li><a href="audio.html">Audio</a></li>
+                <li><a href="video.html">Video</a></li>
+                <li><a href="svg.html">SVG</a></li>
+                <li><a href="canvas.html">Canvas</a></li>
+                <li><a href="pendaftaran.html">Pendaftaran</a></li>
+            </nav>
+
+            <article>
+                <h1>Mouse</h1>
+
+                <!--onclick-->
+                <img src="gambar/gambar7.jpg" 
+                onclick="klikGambar()">
+
+                <!-- onmouseover % onmouserout-->
+                <img src="gambar/gambar8.jpg"
+                onmouseover="perbesar(this)"
+                onmouseout="normal(this)">
+
+                <img src="gambar/gambar9.jpg"
+                onmouseover="perbesar(this)"
+                onmouseout="normal(this)">
+
+                <img src="gambar/gambar10.jpg"
+                onmouseover="perbesar(this)"
+                onmouseout="normal(this)">
+
+            </article>
+        </section>
+        <footer>
+            <p>&copy; 2026 - Praktikum HTML5 | Angga Saputro</p>
+        </footer>
+    </body>
+</hmtl>
