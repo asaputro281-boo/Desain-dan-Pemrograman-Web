@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <title>Halaman Video</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Ubah sesuai data Anda -->
+    <meta name="author" content="Angga Saputro">
+    <meta name="nim" content="253307019">
+
+    <!-- Melengkapi Meta (Blok Bagian Hijau) -->
+    <meta name="description" content="Website praktikum HTML5 Lanjut">
+    <meta name="keywords" content="HTML5, Form, Audio, Video, SVG, Canvas">
+
+    <!-- Melengkapi Style (Blok Bagian Hijau) -->
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            margin: 10;
+        }
+
+        /* HEADER */
+        header {
+            background-color: #44758e;
+            padding: 20px;
+            text-align: center;
+            font-size: 30px;
+            color: white;
+        }
+
+        /* NAVIGATION */
+        nav {
+            float: left;
+            width: 30%;
+            height: 180px;
+            /* hanya untuk demo */
+            background: #ccc;
+            padding: 20px;
+        }
+
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        nav ul li {
+            margin-bottom: 10px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: black;
+            font-weight: bold;
+        }
+
+        /* ARTICLE */
+        article {
+            float: left;
+            padding: 10px;
+            width: 70%;
+            background-color: #f1f1f1;
+            height: 970px;
+            /* hanya untuk demo */
+        }
+
+        /* CLEAR FLOAT */
+        section::after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+        /* FOOTER */
+        footer {
+            background-color: #44758e;
+            padding: 10px;
+            text-align: center;
+            color: white;
+        }
+
+        /* RESPONSIVE */
+        @media (max-width: 600px) {
+
+            nav,
+            article {
+                width: 100%;
+                height: auto;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h2>Video LittleJoys Pics<h2>
+    </header>
+
+    <section>
+
+        <nav>
+            <!-- Melengkapi Navigation Link (Blok Bagian Hijau) -->
+            <li><a href="index.html">Home</a></li>
+            <li><a href="gambar.html">Gambar</a></li>
+            <li><a href="event.html">Event</a></li>
+            <li><a href="audio.html">Audio</a></li>
+            <li><a href="video.html">Video</a></li>
+            <li><a href="svg.html">SVG</a></li>
+            <li><a href="canvas.html">Canvas</a></li>
+            <li><a href="pendaftaran.html">Pendaftaran</a></li>
+        </nav>
+
+        <article>
+            <h1>Video</h1>
+
+            <figure>
+                <figcaption><strong>Video Abun Bermain</strong></figcaption>
+                <video controls autoplay width="250">
+                    <source src="video/Video1.mp4" type="video/mp4"> 
+                    Browser tidak mendukung video.
+                </video>
+            </figure>
+
+            <!-- Tambahan Iframe YouTube -->
+            <figure>
+                <figcaption><strong>Video YouTube Embed</strong></figcaption>
+                <iframe width="auto" height="200" src="https://youtu.be/x3rpVATXu_0?si=RPJVSK1OmetVtPVq"
+                    title="YouTube video player" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen>
+                </iframe>
+            </figure>
+
+            <p>
+                
+                <strong>Kesimpulan Hasil Uji Coba:</strong><br>
+                Video lokal menggunakan tag <code>&lt;video&gt;</code> dapat diatur langsung di dalam HTML. 
+                Kita bisa menambahkan atribut seperti <code>controls</code> untuk menampilkan tombol play/pause, 
+                <code>autoplay</code> agar video diputar otomatis, dan <code>muted</code> untuk mematikan suara.
+
+                Video lokal berasal dari file yang disimpan di komputer atau server kita sendiri. 
+                Sedangkan video YouTube biasanya ditampilkan menggunakan tag <code>&lt;iframe&gt;</code>. 
+                Dengan cara ini, video diambil langsung dari server YouTube sehingga kita tidak perlu 
+                menyimpan file videonya di server.
+
+                Jadi, penggunaan <code>&lt;iframe&gt;</code> lebih praktis untuk menampilkan video dari internet 
+                karena kita hanya perlu menempelkan link video tanpa harus mengunggah file video sendiri.
+</p>
+        </article>
+
+    </section>
+
+    <footer>
+        <p>&copy; 2026 - Praktikum HTML5 | Angga Saputro<p>
+    </footer>
+
+</body>
+
+</html>
