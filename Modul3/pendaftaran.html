@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <title>Halaman Pendaftaran</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Data -->
+    <meta name="author" content="Angga Saputro">
+    <meta name="nim" content="253307019">
+
+    <!-- Meta -->
+    <meta name="description" content="Website praktikum HTML5 Lanjut">
+    <meta name="keywords" content="HTML5, Form, Audio, Video, SVG, Canvas">
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            margin: 10;
+        }
+
+        header {
+            background-color: #44758e;
+            padding: 20px;
+            text-align: center;
+            font-size: 30px;
+            color: white;
+        }
+
+        nav {
+            float: left;
+            width: 30%;
+            height: 195px;
+            background: #ccc;
+            padding: 20px;
+        }
+
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        nav ul li {
+            margin-bottom: 1px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: black;
+            font-weight: normal;
+        }
+
+        article {
+            float: left;
+            padding: 20px;
+            width: 70%;
+            background-color: #f1f1f1;
+            height: 660px;
+        }
+
+        section::after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+        footer {
+            background-color: #44758e;
+            padding: 10px;
+            text-align: center;
+            color: white;
+        }
+
+        @media (max-width: 600px) {
+            nav,
+            article {
+                width: 100%;
+                height: auto;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h2>Form LittleJoys Pics</h2>
+</header>
+
+<section>
+
+<nav>
+    <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="gambar.html">Gambar</a></li>
+        <li><a href="event.html">Event</a></li>
+        <li><a href="audio.html">Audio</a></li>
+        <li><a href="video.html">Video</a></li>
+        <li><a href="svg.html">SVG</a></li>
+        <li><a href="canvas.html">Canvas</a></li>
+        <li><a href="pendaftaran.html">Pendaftaran</a></li>
+    </ul>
+</nav>
+
+<article>
+
+<h1>Form Pendaftaran</h1>
+
+<form>
+
+        <label>No. Telepon </label><br>
+        <input type="tel" pattern="[0-9]{4}-[0-9]{6}" placeholder="0812-123456" required>
+        <br><br>
+
+        <label>Alamat Email</label><br>
+        <input type="email" placeholder="nama@domain.com" required>
+        <br><br>
+
+        <label>Tanggal Lahir</label><br>
+        <input type="date" min="1987-01-01" max="1993-01-01" required>
+        <br><br>
+
+        <label>Tingkat Kepentingan (0 = Tidak Penting, 10 = Mendesak)</label><br>
+        <input type="range" min="0" max="10">
+        <br><br>
+
+        <label>Tanggal Kunjungan (harus setelah hari ini)</label><br>
+        <input type="date" min="2026-03-13" required>
+        <br><br>
+
+        <label>Jam Kunjungan (17:00 - 21:00 WIB)</label><br>
+        <input type="time" min="17:00" max="21:00" required>
+        <br><br>
+
+<input type="submit" value="Daftar">
+
+</form>
+
+</article>
+
+</section>
+
+<footer>
+<p>&copy; 2026 - Praktikum HTML5 | Angga Saputro</p>
+</footer>
+
+</body>
+
+</html>
