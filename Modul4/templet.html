@@ -1,0 +1,107 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>Studi Kasus - Politeknik Negeri Madiun</title>
+    <style>
+        /* Pengaturan Body dan Font Dasar */
+        body {
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        /*Header (Warna Biru) */
+        header {
+            background-color: blue; /* Sesuai gambar studi kasus */
+            color: white;
+            padding: 20px;
+            text-align: left;
+        }
+        header h1 { margin: 0; color: yellow; } /* "Halo CSS!" berwarna kuning */
+
+        /*Container untuk Layout Tengah */
+        .container {
+            display: flex; /* Menggunakan flexbox untuk membagi Menu dan Konten */
+            min-height: 400px;
+            background-color: white;
+        }
+
+        /*Navigation Menu (Samping Kiri) */
+        nav {
+            width: 25%;
+            padding: 20px;
+            border-right: 2px dashed #ccc; /* Border putus-putus sesuai gambar */
+        }
+        nav ul { list-style-type: none; padding: 0; }
+        nav ul li { margin-bottom: 10px; }
+        
+        /* Pseudo-class untuk Link (Materi 6) */
+        nav a {
+            text-decoration: none;
+            color: black; /* Link Default */
+        }
+        nav a:hover {
+            font-weight: bold;
+            text-decoration: underline; /* Link Hover */
+        }
+
+        /* Main Content (Tengah) */
+        main {
+            width: 75%;
+            padding: 40px;
+            text-align: center;
+        }
+        .logo-text { font-weight: bold; font-size: 24px; margin-top: 10px; }
+        .motto { color: brown; margin-top: 20px; font-style: italic; }
+
+        /* Footer (Warna Biru Muda) */
+        footer {
+            background-color: #b0c4de; /* Biru muda sesuai gambar */
+            padding: 10px;
+            text-align: right;
+            font-size: 0.9em;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Halo CSS !</h1>
+        <p>Ini Adalah Website Yang Saya Buat Dengan Tangan Saya Sendiri</p>
+    </header>
+
+    <div class="container">
+        <nav>
+            <ul>
+                <li><a href="#">Menu 1</a></li>
+                <li><a href="#">Menu 2</a></li>
+                <li><a href="#">Menu 3</a></li>
+                <li><a href="#">Menu 4</a></li>
+                <li><a href="#">Menu 5</a></li>
+                <li><a href="#">Menu 6</a></li>
+            </ul>
+        </nav>
+
+        <main>
+            <div style="font-size: 50px;"><img src="gambar/gambar1.jpeg"></div> <div class="logo-text">TI</div>
+            <div class="logo-text">Politeknik Negeri Madiun</div>
+            <p class="motto">
+                Mewujudkan pendidikan tinggi vokasi dalam bidang <br>
+                Teknologi Informasi dan penerapannya yang berkualitas, <br>
+                inovatif dan berdaya saing Nasional.
+            </p>
+        </main>
+    </div>
+
+    <footer>
+        Angga Dwi Saputro | 253307019 | TI-2A
+    </footer>
+
+</body>
+</html>
+
+<p> Coding HTML dan CSS tersebut digunakan untuk membuat tampilan halaman website sederhana yang memiliki beberapa bagian, yaitu header di atas, menu di sebelah kiri, isi atau konten di tengah, dan footer di bagian bawah. CSS digunakan untuk mengatur warna, tulisan, dan tata letak halaman agar tampilan website menjadi lebih rapi, jelas, dan menarik. 
+    Halaman ini juga menampilkan logo serta informasi tentang Politeknik Negeri Madiun.</p>

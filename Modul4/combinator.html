@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Combinator Selector</title>
+    <style>
+        /* No 1: Descendant Selector (Semua p di dalam div) */
+        div p { 
+            color: red; 
+        }
+
+        /* No 2: Child Selector (p yang merupakan anak langsung dari div) */
+        div > p { 
+            background-color: yellow; 
+        }
+
+        /* No 3: Adjacent Sibling Selector (p yang tepat setelah div) */
+        div + p { 
+            background-color: darkgray; 
+        }
+
+        /* No 4: General Sibling Selector (Semua p yang merupakan saudara div) */
+        div ~ p { 
+            color: blue; 
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <p> Paragraf ini berwarna merah karena berada di dalam DIV (Descendant) dan berlatar kuning (Child). yang bahwa selector descendant (div p) akan memilih semua elemen p yang berada didalam div</p>
+        <p> Paragraf ini juga anak dari DIV sehingga mendapatkan background kuning.</p>
+
+    </div>
+
+        <p>Paragraf ini tepat setelah DIV, maka mendapat latar abu-abu (Adjacent).</p>
+        <p>Paragraf ini adalah saudara dari DIV, maka teksnya berwarna cyan (General Sibling).</p>
+</body>
+</html>
+
+<p> Kesimpulan :
+    dengan menggunakan combinator selector, setiap paragraf bisa menndapatkan warna atau background yang berbeda yang nanti tergantung
+    apakah paragraf itu nanti berada didalam div, anak langsung div, tepat setelah div, atau berada setelah div sebagai saudara elemen
+</p>

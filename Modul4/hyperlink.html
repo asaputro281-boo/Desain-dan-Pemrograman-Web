@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Pengaturan pada link</title>
+    <style type="text/css">
+        a:link { text-decoration: none; background-color: #FF9933; color: #FFFFFF; } /* Tautan normal*/
+        a:visited { text-decoration: none; color: #222; } /* Tautan yang sudah dikunjungi*/
+        a:active { text-decoration: none; color: #660000; } /* Tautan saat diklik*/
+        
+        /* Efek saat kursor di atas tautan */
+        a:hover {
+            font-weight: bold;
+            text-transform: uppercase; /* Mengubah teks jadi huruf kapital semua*/
+            text-decoration: underline overline; /* Garis bawah dan atas*/
+            color: #000000;
+            background-color: #3ff4fa;
+        }
+    </style>
+</head>
+<body>
+    <table border="0">
+        <td><a href="#">Arahkan mouse ke Menu 1</a></td>
+    
+        <td><a href="#">Arahkan mouse ke Menu 2</a></td>
+    </table>
+</body>
+</html>
+
+<p>dengan cara ini nantinya untuk tampilan link akan berubah sesuai dengan interaksi pengguna, misalnya saat link belum dikunjungi
+    sudah dikunjungi, sedang diklik, atau saat mouse diarahkan ke link.
+</p>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Belajar Pseudo-class</title>
+    <style>
+        /* Sembunyikan paragraf secara default */
+        p {
+            display: none;
+            background-color: gainsboro;
+            padding: 30px; 
+        }
+
+        /* Tampilkan paragraf saat div di-hover */
+        div:hover p {
+            display: block;
+        }
+
+        /* Tugas tambahan: Link berubah warna */
+        a:link { 
+            color: rgb(23, 23, 163);
+            text-decoration: none;
+        
+        }
+
+        a:hover { 
+            color: grey; 
+            font-weight: normal; 
+        }
+    </style>
+</head>
+<body>
+    <div> 
+        Letakkan kursor disini untuk melihat div element yang angga buat
+        <p>Saya Adalah Angga Dwi Saputro Seorang anak terakhir dari dua bersaudara yang benar benar ingin membanggakan kedua orang tua dengan mengangkat derajat kedua orang tua saya didunia dan diakhirat dan memperbaiki finansial keuangan keluarga 
+            dan juga ingin bercita cita menciptakan sebuah keinginan untuk kedua orang tua saya untuk beristirahat dimasa tua tuanya dan berfokus untuk ibadahnya saja - dear angga -.
+        </p>
+    </div>
+
+    <br>
+    <a href="#">Contoh Link (Arahkan mouse ke sini)</a> 
+</body>
+</html>
+
+<p> Paragraf yang ada didalam div
+    akan tersembunyi terlebih dahulu dan muncul ketika kursor diarahkan ke div
+</p>
