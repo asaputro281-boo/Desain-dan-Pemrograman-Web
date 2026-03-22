@@ -1,0 +1,23 @@
+/*Selektor Tag: Berlaku untuk semua elemen <p> standar */
+p {
+    color: #555;
+    font-family: Arial;
+    background: #00FF00;
+    font-size: 16pt;
+    font-weight: bold;
+}
+
+/*Selektor Class: Berlaku untuk elemen <p> dengan class="group"  */
+p.group {
+    color: red;
+    font-family: Verdana;
+    font-size: 14pt;
+    font-weight: normal;
+    background: #0000FF;
+}
+
+/*Selektor ID: Berlaku khusus untuk elemen dengan id="one"  */
+p#one {
+    color: #00FF00;
+    background: #FFFFFF;
+}
