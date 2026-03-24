@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Grid Layout 2 - Skenario 2</title>
+
+<style>
+
+    .grid-container{
+        display: grid;
+        grid-template-columns: auto auto auto auto;
+        grid-template-columns: 500px 300px 100px 50px;
+        background-color: #2196F3;
+        padding: 10px;
+    }
+
+    .grid-container div{
+        background-color: rgba(255, 255, 255, 0.8);
+        border: 1px solid black;
+        padding: 20px;
+        text-align: center;
+    }
+
+.item1{
+    grid-column: 1 / 4;
+}
+
+</style>
+</head>
+
+<body>
+
+<h2>Grid Layout 2 - Skenario 2</h2>
+
+        <div class="grid-container">
+        <div class="item1">1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+        <div>5</div>
+        <div>6</div>
+        <div>7</div>
+        <div>8</div>
+        </div>
+
+<p>
+Kesimpulan skenario 2 layout 2 adalah: Property <b>grid-template-columns</b> 
+digunakan untuk mengatur jumlah dan ukuran kolom pada grid. Penggunaan nilai <b>auto</b> membuat kolom menyesuaikan ruang yang tersedia, sedangkan nilai dalam satuan <b>px</b> membuat ukuran kolom tetap. Perbedaan kombinasi nilai tersebut akan menghasilkan tampilan layout yang berbeda, baik dari segi jumlah kolom maupun lebar setiap kolom.
+</p>
+
+</body>
+</html>

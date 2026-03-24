@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Layout Grid Angga</title>
+    <style>
+          body{
+            font-family: Arial;
+        }
+
+        .grid-container {
+            display: grid;
+            grid-template-columns: 1fr 2fr 1fr;
+            grid-template-rows: auto auto auto;
+
+            gap: 10px;
+            background-color: #2196F3;
+            padding: 10px;
+        }
+
+        .grid-container div {
+            background-color: rgba(255, 255, 255, 0.8);
+            text-align: center;
+            padding: 20px;
+            font-weight: bold;
+        }
+
+        .header{
+            grid-column: 1 / 4; 
+        }
+
+        .menu{
+            grid-row: 2 / 4; 
+        }
+
+        .main{
+            grid-column: 2 / 3;
+        }
+
+        .right{
+            grid-column: 3 / 4;
+        }
+
+        .footer{
+            grid-column: 2 / 4; 
+        }
+    </style>
+
+</head>
+<body>
+    <h2> Layout Grid Angga</h2>
+    <div class="grid-container">
+        <div class="header">
+        Header
+        </div>
+        <div class="menu">
+            Menu
+        </div>
+        <div class="main">
+            Main
+        </div>
+        <div class="right">
+            Right
+        </div>
+        <div class="footer">
+            Footer
+        </div>
+    </div>
+<p>
+    Kesimpulan : CSS Grid digunakann untuk mengatur tata letak halaman dengan area menjadi baris dan kolom.
+    Dengan menggunakan properti seperti grid-column dan grid-row, kita bisa menentukan posisi setiap bagian seperti header, menu, main, dan footer dengan lebih mudah sehingga tampilan menjadi rapi dan teratur.
+</p>
+</body>
+</html>
