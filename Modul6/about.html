@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About - Materialize Version</title>
+
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+  <style>
+    body {
+      background-color: #f4f6f9;
+      font-family:'sans-serif';
+    }
+
+    .hero {
+      background: linear-gradient(to right, #161a1e, #21cbf3);
+      padding: 70px 20px;
+      color: white;
+      text-align: center;
+      border-radius: 0 0 30px 30px;
+    }
+
+    .profile-card {
+      border-radius: 20px;
+      padding: 25px;
+      text-align: center;
+    }
+
+    .profile-img {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      margin-bottom: 15px;
+      object-fit: cover;
+    }
+
+    .info-item {
+      margin: 10px 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+    }
+
+    .custom-card {
+      border-radius: 15px;
+      padding: 15px;
+      transition: 0.3s;
+    }
+
+    .custom-card:hover {
+      transform: translateY(-5px);
+    }
+
+    .skill-item {
+      display: flex;
+      align-items: center;
+      padding: 12px;
+      border-bottom: 1px solid #eee;
+    }
+
+    .skill-item i {
+      margin-right: 10px;
+      color: #21cbf3;
+    }
+
+    footer {
+      margin-top: 50px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="blue-grey darken-4">
+    <div class="nav-wrapper container">
+      <a href="#" class="brand-logo">Angga</a>
+      <ul class="right hide-on-med-and-down">
+        <li><a href="home.html">Home</a></li>
+        <li class="active"><a href="about.html">About</a></li>
+        <li><a href="portfolio.html">Portfolio</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero">
+    <h4>Halo, Saya Angga Dwi Saputro</h4>
+    <p class="flow-text">Kenali Kemampuan Saya dan Juga Pengalaman Saya Melalui Portofolio</p>
+  </section>
+
+  <!-- CONTENT -->
+  <div class="container" style="margin-top: 40px;">
+    <div class="row">
+
+      <!-- PROFILE -->
+      <div class="col s12 m4">
+        <div class="card profile-card z-depth-2">
+          <img src="iamge/img1.jpeg" class="profile-img">
+
+          <h5>Angga Dwi Saputro</h5>
+          <p>NIM: 253307019</p>
+
+          <div class="divider"></div>
+
+          <div class="info-item">
+            <i class="material-icons">email</i>
+            <span>email@gmail.com</span>
+          </div>
+
+          <div class="info-item">
+            <i class="material-icons">phone</i>
+            <span>+62 812 3456 7890</span>
+          </div>
+
+          <div class="info-item">
+            <i class="material-icons">location_on</i>
+            <span>Madiun</span>
+          </div>
+
+          <a class="btn waves-effect waves-light" style="margin-top:15px; background:#21cbf3;">
+            Download CV
+          </a>
+        </div>
+      </div>
+
+      <!-- RIGHT CONTENT -->
+      <div class="col s12 m8">
+
+        <div class="card custom-card z-depth-2">
+          <div class="card-content">
+            <span class="card-title">Siapa Saya?</span>
+            <p>
+              Saya Merupakan Mahasiswa Teknologi Informasi Politeknik Negeri Madiun.
+              Saya tertarik pada bidang pengembangan web dan terus belajar membangun
+              website yang modern, responsif, dan user-friendly.
+            </p>
+          </div>
+        </div>
+
+        <div class="card custom-card z-depth-2">
+          <div class="card-content">
+            <span class="card-title">Keahlian</span>
+
+            <div class="skill-item">
+              <i class="material-icons">code</i> HTML
+            </div>
+            <div class="skill-item">
+              <i class="material-icons">brush</i> CSS
+            </div>
+            <div class="skill-item">
+              <i class="material-icons">memory</i> JavaScript
+            </div>
+            <div class="skill-item">
+              <i class="material-icons">layers</i> Materialize CSS
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="page-footer blue-grey darken-4">
+    <div class="container center-align">
+      <p>&copy; 2026 Tutorial CSS Framework</p>
+      <p>Angga Dwi Saputro | 253307019</p>
+    </div>
+  </footer>
+
+  <!-- MATERIALIZE JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+</body>
+</html>

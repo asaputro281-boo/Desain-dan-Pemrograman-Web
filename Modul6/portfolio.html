@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio - Materialize</title>
+
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+  <style>
+    body {
+      background-color: #f4f6f9;
+      font-family:'sans-serif';
+    }
+
+    /* HERO */
+    .hero {
+      background: linear-gradient(to right, #161a1e, #21cbf3);
+      padding: 80px 20px;
+      color: white;
+      text-align: center;
+      border-radius: 0 0 30px 30px;
+    }
+
+    /* PORTFOLIO CARD */
+    .portfolio-card {
+      display: flex;
+      border-radius: 20px;
+      overflow: hidden;
+      transition: 0.3s;
+    }
+
+    .portfolio-card:hover {
+      transform: translateY(-8px);
+    }
+
+    /* SIDE COLOR */
+    .side-color {
+      width: 80px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+    }
+
+    .purple { background: linear-gradient(#6a1b9a, #ab47bc); }
+    .pink   { background: linear-gradient(#d81b60, #ec407a); }
+    .green  { background: linear-gradient(#2e7d32, #66bb6a); }
+
+    .side-color i {
+      font-size: 30px;
+    }
+
+    .card-content {
+      flex: 1;
+      padding: 20px;
+    }
+
+    .chip {
+      margin-top: 10px;
+    }
+
+    footer {
+      margin-top: 50px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="blue-grey darken-4">
+    <div class="nav-wrapper container">
+      <a href="#" class="brand-logo">My Portfolio</a>
+      <ul class="right hide-on-med-and-down">
+        <li><a href="home.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li class="active"><a href="portfolio.html">Portfolio</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero">
+    <h3>PORTOFOLIO SAYA</h3>
+    <p class="flow-text">Beberapa Karya Yang Telah Saya Buat</p>
+  </section>
+
+  <!-- PORTFOLIO -->
+  <div class="container" style="margin-top:40px;">
+    <div class="row">
+
+      <!-- CARD 1 -->
+      <div class="col s12 m6 l4">
+        <div class="card portfolio-card z-depth-2">
+          <div class="side-color purple">
+            <i class="material-icons">work</i>
+          </div>
+          <div class="card-content">
+            <h6><b>Website Portofolio</b></h6>
+            <p>Website Portofolio Pribadi dengan desain responsif dan Userfriendly.</p>
+            <span class="chip">HTML</span>
+            <span class="chip">CSS</span>
+            <span class="chip">Materialize</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- CARD 2 -->
+      <div class="col s12 m6 l4">
+        <div class="card portfolio-card z-depth-2">
+          <div class="side-color yellow">
+            <i class="material-icons">brush</i>
+          </div>
+          <div class="card-content">
+            <h6><b>UI Design Dashboard</b></h6>
+            <p>Desain Dashboard Sebuah Website Sederhana Menggunakan Figma atau Canva.</p>
+            <span class="chip">Figma</span>
+            <span class="chip">UI/UX</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- CARD 3 -->
+      <div class="col s12 m6 l4">
+        <div class="card portfolio-card z-depth-2">
+          <div class="side-color blue">
+            <i class="material-icons">delete</i>
+          </div>
+          <div class="card-content">
+            <h6><b>Pembuatan Sistem Penjemputan Sampah</b></h6>
+            <p>Perancangan Sistem Menggunakan flowchart dan Mindmap.</p>
+            <span class="chip">HTML</span>
+            <span class="chip">CSS</span>
+            <span class="chip">JavaScript</span>
+          </div>
+        </div>  
+      </div>
+
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="page-footer blue-grey darken-4">
+    <div class="container center-align">
+      <p>&copy; 2026 Tutorial CSS Framework</p>
+      <p>Angga Dwi Saputro | 253307019</p>
+    </div>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+</body>
+</html>
