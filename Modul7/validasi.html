@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Validasi Input Nama</title>
+
+    <!-- Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg, #43cea2, #185a9d);
+        }
+
+        .container {
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+            text-align: center;
+            width: 300px;
+        }
+
+        h2 {
+            margin-bottom: 20px;
+        }
+
+        input[type="text"] {
+            width: 100%;
+            padding: 10px;
+            border-radius: 8px;
+            border: 1px solid #ccc;
+            margin-bottom: 15px;
+            outline: none;
+        }
+
+        input[type="text"]:focus {
+            border-color: #43cea2;
+        }
+
+        button {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 20px;
+            background: #43cea2;
+            color: white;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        button:hover {
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <h2>📝 Input Nama</h2>
+
+        <form name="formku" onsubmit="return cekNama(this)">
+            <input type="text" name="nama" placeholder="Masukkan nama kamu">
+            <br>
+            <button type="submit">Kirim</button>
+        </form>
+    </div>
+
+    <script>
+        function cekNama(form) {
+            if (form.nama.value.trim() === "") {
+                alert("Nama harus dimasukkan!");
+                form.nama.focus();
+                return false;
+            }
+
+            alert("Terima kasih, " + form.nama.value + " 😊");
+            return true;
+        }
+    </script>
+
+</body>
+
+</html>

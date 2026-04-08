@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Pilihan Musik</title>
+
+    <!-- Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg, #ff7e5f, #feb47b);
+        }
+
+        .container {
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+            width: 320px;
+        }
+
+        h2 {
+            margin-bottom: 15px;
+            text-align: center;
+        }
+
+        label {
+            display: block;
+            margin: 8px 0;
+            cursor: pointer;
+        }
+
+        input[type="text"] {
+            width: 100%;
+            padding: 10px;
+            border-radius: 8px;
+            border: 1px solid #ccc;
+            margin-top: 10px;
+        }
+
+        hr {
+            margin: 15px 0;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <h2>🎵 Pilih Musik Favorit</h2>
+
+        <form name="formTes">
+            <label><input type="radio" name="radioMusik" value="Jazz" onclick="info()"> Jazz</label>
+            <label><input type="radio" name="radioMusik" value="Keroncong" onclick="info()"> Keroncong</label>
+            <label><input type="radio" name="radioMusik" value="Dangdut" onclick="info()"> Dangdut</label>
+            <label><input type="radio" name="radioMusik" value="Lainnya" onclick="info()"> Lainnya</label>
+
+            <hr>
+
+            <label>Info:</label>
+            <input type="text" name="fieldMusik" placeholder="Pilihan akan tampil di sini">
+        </form>
+    </div>
+
+    <script>
+        function info() {
+            let radios = document.formTes.radioMusik;
+
+            for (let i = 0; i < radios.length; i++) {
+                if (radios[i].checked) {
+                    document.formTes.fieldMusik.value = radios[i].value;
+                }
+            }
+        }
+    </script>
+
+</body>
+
+</html>

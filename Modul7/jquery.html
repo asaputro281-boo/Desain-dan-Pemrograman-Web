@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Menu Navigasi jQuery</title>
+
+    <!-- jQuery UI -->
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+    <!-- Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+        }
+
+        .container {
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+            text-align: center;
+        }
+
+        h2 {
+            margin-bottom: 20px;
+        }
+
+        #menu {
+            width: 220px;
+            margin: auto;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        .ui-menu {
+            border-radius: 10px;
+            font-size: 14px;
+        }
+
+        .ui-menu-item-wrapper {
+            padding: 10px;
+        }
+
+        .ui-menu-item-wrapper:hover {
+            background: #667eea !important;
+            color: white !important;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <h2>📋 Menu Navigasi</h2>
+
+        <ul id="menu">
+            <li><div>Beranda</div></li>
+
+            <li>
+                <div>Profil Produk</div>
+                <ul>
+                    <li><div>Elektronik</div></li>
+                    <li><div>Pakaian</div></li>
+                    <li><div>Otomotif</div></li>
+                </ul>
+            </li>
+
+            <li><div>Kontak Kami</div></li>
+
+            <li class="ui-state-disabled">
+                <div>Layanan Segera Hadir</div>
+            </li>
+        </ul>
+    </div>
+
+    <script>
+        $(function () {
+            $("#menu").menu();
+        });
+    </script>
+
+</body>
+
+</html>

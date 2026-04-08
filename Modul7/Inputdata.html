@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Input Data Modern</title>
+
+    <!-- Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg, #4facfe, #00f2fe);
+        }
+
+        .container {
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            text-align: center;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+        }
+
+        h1 {
+            margin-bottom: 10px;
+        }
+
+        p {
+            color: #555;
+        }
+
+        button {
+            margin-top: 15px;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 20px;
+            background: #4facfe;
+            color: white;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        button:hover {
+            transform: scale(1.05);
+        }
+
+        #hasil {
+            margin-top: 15px;
+            font-weight: 500;
+            color: #333;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <h1>👤 Input Nama</h1>
+        <p>Klik tombol untuk memasukkan nama kamu</p>
+        <button onclick="inputNama()">Masukkan Nama</button>
+        <div id="hasil"></div>
+    </div>
+
+    <script>
+        function inputNama() {
+            var nama = prompt("Nama anda siapa?");
+            
+            if (nama) {
+                document.getElementById("hasil").innerHTML = "Hai, " + nama + " 👋";
+            } else {
+                document.getElementById("hasil").innerHTML = "Kamu belum memasukkan nama 😅";
+            }
+        }
+    </script>
+
+</body>
+
+</html>

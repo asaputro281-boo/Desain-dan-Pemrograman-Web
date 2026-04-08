@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AJAX & jQuery</title>
+
+    <!-- Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg, #eef2f3, #dfe9f3);
+            margin: 0;
+            padding: 30px;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: auto;
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+        }
+
+        h2 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #2c3e50;
+        }
+
+        h3 {
+            color: #3498db;
+            margin-top: 20px;
+        }
+
+        p {
+            color: #555;
+        }
+
+        code {
+            background: #f4f4f4;
+            padding: 3px 6px;
+            border-radius: 5px;
+        }
+
+        .example-box {
+            margin-top: 15px;
+            padding: 20px;
+            border-radius: 10px;
+            background: #f9fbff;
+            border: 1px solid #d6e4ff;
+            text-align: center;
+        }
+
+        button {
+            margin: 5px;
+            padding: 8px 15px;
+            border: none;
+            border-radius: 20px;
+            background: #3498db;
+            color: white;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        button:hover {
+            transform: scale(1.05);
+        }
+
+        .note {
+            margin-top: 20px;
+            font-size: 13px;
+            color: #888;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <h2>📘 Uraian AJAX & jQuery</h2>
+
+        <h3>1. Apa itu AJAX?</h3>
+        <p>
+            <strong>AJAX (Asynchronous JavaScript and XML)</strong> adalah teknik pengembangan web yang memungkinkan halaman
+            memperbarui data secara <em>asynchronous</em>, tanpa perlu reload halaman.
+        </p>
+
+        <h3>2. Apa itu jQuery?</h3>
+        <p>
+            <strong>jQuery</strong> adalah library JavaScript yang mempermudah manipulasi HTML, event, animasi, dan AJAX.
+        </p>
+
+        <h3>3. Cara Menggunakan jQuery</h3>
+        <p>
+            jQuery dapat digunakan dengan menambahkan library melalui CDN seperti:
+            <br>
+            <code>&lt;script src=\"https://code.jquery.com/jquery-3.6.0.min.js\"&gt;&lt;/script&gt;</code>
+        </p>
+
+        <h3>4. Contoh jQuery Sederhana</h3>
+        <p>Klik tombol untuk menyembunyikan atau menampilkan teks:</p>
+
+        <div class="example-box">
+            <p id="teksInfo">✨ Ini contoh teks jQuery</p>
+            <button id="btnSembunyi">Sembunyikan</button>
+            <button id="btnTampil">Tampilkan</button>
+        </div>
+
+        <p class="note">
+            *Contoh ini menunjukkan penggunaan selector dan event jQuery.
+        </p>
+    </div>
+
+    <script>
+        $(document).ready(function () {
+            $("#btnSembunyi").click(function () {
+                $("#teksInfo").fadeOut(500);
+            });
+
+            $("#btnTampil").click(function () {
+                $("#teksInfo").fadeIn(500);
+            });
+        });
+    </script>
+
+</body>
+
+</html>

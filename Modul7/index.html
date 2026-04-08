@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard Praktikum JavaScript</title>
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            background: linear-gradient(135deg, #1f2a44, #2c3e50);
+            min-height: 100vh;
+            padding: 30px;
+            color: #333;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: auto;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(8px);
+            border-radius: 15px;
+            padding: 30px;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+        }
+
+        h1 {
+            text-align: center;
+            font-weight: 600;
+            margin-bottom: 10px;
+            color: #2c3e50;
+        }
+
+        .subtitle {
+            text-align: center;
+            color: #777;
+            margin-bottom: 25px;
+        }
+
+        .section-title {
+            margin-top: 30px;
+            margin-bottom: 15px;
+            font-weight: 600;
+            color: #2c3e50;
+            border-left: 5px solid #5dade2;
+            padding-left: 10px;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .card {
+            background: white;
+            border-radius: 12px;
+            padding: 20px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+            border: 1px solid rgba(0,0,0,0.05);
+        }
+
+        .card::before {
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 4px;
+            background: linear-gradient(90deg, #5dade2, #3498db);
+            top: 0;
+            left: 0;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+        }
+
+        .card-title {
+            font-weight: 600;
+            margin-bottom: 8px;
+            color: #2c3e50;
+        }
+
+        .desc {
+            font-size: 14px;
+            color: #666;
+            margin-bottom: 15px;
+        }
+
+        .btn {
+            display: inline-block;
+            text-decoration: none;
+            background: linear-gradient(90deg, #5dade2, #3498db);
+            color: white;
+            padding: 8px 15px;
+            border-radius: 20px;
+            font-size: 13px;
+            transition: 0.3s;
+        }
+
+        .btn:hover {
+            opacity: 0.9;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 30px;
+            font-size: 13px;
+            color: #aaa;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <h1>📊 Dashboard Praktikum</h1>
+        <p class="subtitle">Modul 7 - JavaScript</p>
+
+        <div class="section-title">Latihan Dasar</div>
+        <div class="grid">
+            <div class="card">
+                <div class="card-title">1. Program Alert</div>
+                <div class="desc">Menampilkan pesan "Hallo!" saat halaman dimuat.</div>
+                <a href="alert.html" class="btn">Buka</a>
+            </div>
+
+            <div class="card">
+                <div class="card-title">2. Input Data</div>
+                <div class="desc">Mengambil input nama menggunakan prompt.</div>
+                <a href="Inputdata.html" class="btn">Buka</a>
+            </div>
+
+            <div class="card">
+                <div class="card-title">3. Confirm Box</div>
+                <div class="desc">Konfirmasi logout OK / Cancel.</div>
+                <a href="confirmbox.html" class="btn">Buka</a>
+            </div>
+
+            <div class="card">
+                <div class="card-title">4. Validasi Form</div>
+                <div class="desc">Cek input tidak boleh kosong.</div>
+                <a href="validasi.html" class="btn">Buka</a>
+            </div>
+
+            <div class="card">
+                <div class="card-title">5. Radio Box</div>
+                <div class="desc">Memilih musik dengan radio button.</div>
+                <a href="Radiobox.html" class="btn">Buka</a>
+            </div>
+
+            <div class="card">
+                <div class="card-title">6. Verifikasi Password</div>
+                <div class="desc">Cek kesamaan password.</div>
+                <a href="verifikasi_password.html" class="btn">Buka</a>
+            </div>
+        </div>
+
+        <div class="section-title">Tugas Mandiri & jQuery</div>
+        <div class="grid">
+            <div class="card">
+                <div class="card-title">7. Real-time Clock</div>
+                <div class="desc">Menampilkan waktu real-time.</div>
+                <a href="realtime_date.html" class="btn">Buka</a>
+            </div>
+
+            <div class="card">
+                <div class="card-title">8. AJAX & jQuery</div>
+                <div class="desc">Penjelasan konsep jQuery.</div>
+                <a href="ajax.html" class="btn">Buka</a>
+            </div>
+
+            <div class="card">
+                <div class="card-title">9. Menu jQuery</div>
+                <div class="desc">Navigasi interaktif jQuery UI.</div>
+                <a href="jquery.html" class="btn">Buka</a>
+            </div>
+
+            <div class="card">
+                <div class="card-title">10. Dialog Box</div>
+                <div class="desc">Popup interaktif jQuery.</div>
+                <a href="dialog_box.html" class="btn">Buka</a>
+            </div>
+
+            <div class="card">
+                <div class="card-title">11. Progressbar</div>
+                <div class="desc">Simulasi progress download.</div>
+                <a href="dialog_download.html" class="btn">Buka</a>
+            </div>
+        </div>
+
+        <footer>
+            © 2026 - Praktikum JavaScript | Dibuat oleh Angga
+        </footer>
+    </div>
+
+</body>
+
+</html>

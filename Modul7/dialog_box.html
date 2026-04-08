@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Dialog jQuery Modern</title>
+
+    <!-- jQuery UI -->
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+    <!-- Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg, #2c3e50, #4ca1af);
+        }
+
+        .container {
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            text-align: center;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+            width: 350px;
+        }
+
+        h2 {
+            margin-bottom: 10px;
+            color: #2c3e50;
+        }
+
+        p {
+            color: #666;
+            font-size: 14px;
+        }
+
+        button {
+            margin-top: 15px;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 20px;
+            background: #4ca1af;
+            color: white;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        button:hover {
+            transform: scale(1.05);
+        }
+
+        /* Custom dialog style */
+        .ui-dialog-titlebar {
+            background: #4ca1af;
+            color: white;
+            border: none;
+        }
+
+        .ui-dialog {
+            border-radius: 12px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <h2>💬 Dialog jQuery</h2>
+        <p>Popup akan muncul saat halaman dibuka</p>
+        <button id="btnBuka">Buka Dialog Lagi</button>
+    </div>
+
+    <div id="dialogBasic" title="📢 Informasi Penting">
+        <p>
+            Ini adalah <strong>Basic Dialog</strong> menggunakan jQuery UI.<br>
+            Anda bisa menggeser dan menutup dialog ini.
+        </p>
+    </div>
+
+    <script>
+        $(function () {
+            $("#dialogBasic").dialog({
+                autoOpen: true,
+                modal: true,
+                show: { effect: "fade", duration: 400 },
+                hide: { effect: "fade", duration: 400 }
+            });
+
+            $("#btnBuka").click(function () {
+                $("#dialogBasic").dialog("open");
+            });
+        });
+    </script>
+
+</body>
+
+</html>

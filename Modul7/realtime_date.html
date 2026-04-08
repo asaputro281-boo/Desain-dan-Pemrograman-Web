@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Waktu Real-time</title>
+
+    <!-- Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg, #1e3c72, #2a5298);
+            color: white;
+        }
+
+        .container {
+            text-align: center;
+            background: rgba(255, 255, 255, 0.1);
+            padding: 30px;
+            border-radius: 15px;
+            backdrop-filter: blur(10px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+        }
+
+        h2 {
+            margin-bottom: 15px;
+        }
+
+        #clock {
+            font-size: 28px;
+            font-weight: 500;
+            letter-spacing: 1px;
+        }
+    </style>
+</head>
+
+<body onload="tampilkanWaktu()">
+
+    <div class="container">
+        <h2>🕒 Waktu Saat Ini</h2>
+        <div id="clock"></div>
+    </div>
+
+    <script>
+        function tampilkanWaktu() {
+            setInterval(() => {
+                const sekarang = new Date();
+                document.getElementById('clock').innerHTML =
+                    sekarang.toLocaleString('id-ID', {
+                        weekday: 'long',
+                        year: 'numeric',
+                        month: 'long',
+                        day: 'numeric',
+                        hour: '2-digit',
+                        minute: '2-digit',
+                        second: '2-digit'
+                    });
+            }, 1000);
+        }
+    </script>
+
+</body>
+
+</html>

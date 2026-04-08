@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Download Progress</title>
+
+    <!-- jQuery UI -->
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+    <!-- Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg, #1e3c72, #2a5298);
+        }
+
+        /* Dialog */
+        .ui-dialog {
+            border-radius: 12px;
+        }
+
+        .ui-dialog-titlebar {
+            background: #2a5298;
+            color: white;
+            border: none;
+        }
+
+        #download-dialog {
+            text-align: center;
+            padding: 20px;
+        }
+
+        .progress-label {
+            margin-bottom: 10px;
+            font-weight: 500;
+            color: #333;
+        }
+
+        #progressbar {
+            height: 20px;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        .ui-progressbar-value {
+            background: linear-gradient(90deg, #4facfe, #00f2fe);
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="download-dialog" title="📥 Download File">
+        <div class="progress-label">Starting download...</div>
+        <div id="progressbar"></div>
+    </div>
+
+    <script>
+        $(function () {
+            var progressbar = $("#progressbar"),
+                progressLabel = $(".progress-label");
+
+            progressbar.progressbar({
+                value: 0,
+                change: function () {
+                    progressLabel.text("Download Progress: " + progressbar.progressbar("value") + "%");
+                },
+                complete: function () {
+                    progressLabel.text("✅ Download Complete!");
+                }
+            });
+
+            function progress() {
+                var val = progressbar.progressbar("value") || 0;
+                progressbar.progressbar("value", val + 2);
+
+                if (val < 100) {
+                    setTimeout(progress, 80);
+                }
+            }
+
+            $("#download-dialog").dialog({
+                modal: true,
+                resizable: false,
+                draggable: true
+            });
+
+            setTimeout(progress, 800);
+        });
+    </script>
+
+</body>
+
+</html>
