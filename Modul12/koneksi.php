@@ -1,15 +1,19 @@
 <?php
-// Variabel koneksi dengan database mysql [cite: 27]
-$host  = "localhost"; // [cite: 30]
-$user  = "root";      // [cite: 32]
-$paswd = "";          // Kosongkan jika menggunakan XAMPP bawaan [cite: 34]
-$name  = "koneksi_dbphp"; // DIUBAH SESUAI SCREENSHOT KAMU 
+class Database {
+    private $host = "localhost";
+    private $username = "root";
+    private $password = "";
+    private $database = "koneksi_dbphp";
+    public $con;
 
-// Proses koneksi [cite: 40]
-$link = mysqli_connect($host, $user, $paswd, $name); // [cite: 48]
-
-// Periksa koneksi, jika gagal akan menampilkan pesan error [cite: 49]
-if (!$link) { // [cite: 49]
-    die("Koneksi dengan database gagal: " . mysqli_connect_errno() . " - " . mysqli_connect_error()); // [cite: 50]
+    public function getConnection() {
+        $this->con = new mysqli($this->host, $this->username, $this->password, $this->database);
+        
+        if ($this->con->connect_error) {
+            die("Koneksi gagal: " . $this->con->connect_error);
+        }
+        
+        return $this->con;
+    }
 }
 ?>

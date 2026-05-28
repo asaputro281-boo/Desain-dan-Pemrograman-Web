@@ -1,12 +1,20 @@
 <?php
+  // memanggil file koneksi.php untuk membuat koneksi berbasis OOP
   include("koneksi.php");
+  $db = new Database();
+  $con = $db->getConnection();
 
-  // Fitur pencarian
+  // Fitur pencarian berbasis OOP dan Prepared Statement
   $search = "";
-  $whereClause = "";
   if (isset($_GET['search']) && !empty($_GET['search'])) {
-      $search = mysqli_real_escape_string($link, $_GET['search']);
-      $whereClause = " WHERE namaDosen LIKE '%$search%'";
+      $search = $_GET['search'];
+      // Menyiapkan statement untuk pencarian data
+      $stmt = $con->prepare("SELECT * FROM t_dosen WHERE namaDosen LIKE ? ORDER BY idDosen ASC");
+      $searchParam = "%$search%";
+      $stmt->bind_param("s", $searchParam);
+  } else {
+      // Menyiapkan statement jika tidak ada pencarian (tampil semua data)
+      $stmt = $con->prepare("SELECT * FROM t_dosen ORDER BY idDosen ASC");
   }
 ?>
 <!DOCTYPE html>
@@ -14,29 +22,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Data Dosen — SIA</title>
+    <title>Data Dosen (OOP) — SIA</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <!-- Navbar -->
     <nav class="navbar">
-        <div class="brand">SIAKAD<span>| Sistem Informasi Akademik</span></div>
+        <div class="brand">SIA OOP <span>| Sistem Informasi Akademik</span></div>
         <ul class="nav-links">
             <li><a href="index.php">Dashboard</a></li>
-            <li><a href="viewdosen.php" class="active"> Dosen</a></li>
+            <li><a href="viewdosen.php" class="active">Dosen</a></li>
             <li><a href="viewmahasiswa.php">Mahasiswa</a></li>
             <li><a href="viewmatakuliah.php">Mata Kuliah</a></li>
         </ul>
     </nav>
 
-    <!-- Page Header -->
     <div class="page-header fade-in">
         <h1>Data Dosen</h1>
-        <p>Kelola data dosen di sistem informasi akademik</p>
+        <p>Kelola data dosen dengan implementasi Object-Oriented Programming</p>
     </div>
 
     <div class="card fade-in">
-        <!-- Actions Bar -->
         <div class="actions-bar">
             <form class="search-bar" method="GET" action="viewdosen.php">
                 <input type="text" name="search" placeholder="🔍 Cari berdasarkan nama dosen..." value="<?php echo htmlspecialchars($search); ?>">
@@ -49,7 +54,6 @@
             <div class="alert alert-success"><?php echo htmlspecialchars($_GET['msg']); ?></div>
         <?php endif; ?>
 
-        <!-- Tabel Dosen -->
         <table class="data-table">
             <thead>
                 <tr>
@@ -61,27 +65,18 @@
             </thead>
             <tbody>
                 <?php
-                  // jalankan query untuk menampilkan semua data diurutkan berdasarkan idDosen
-                  $query = "SELECT * FROM t_dosen" . $whereClause . " ORDER BY idDosen ASC";
-                  $result = mysqli_query($link, $query);
+                  // Eksekusi prepared statement yang sudah disiapkan di atas
+                  $stmt->execute();
+                  $result = $stmt->get_result();
 
-                  // mengecek apakah ada error ketika menjalankan query
-                  if(!$result) {
-                      die ("Query Error: ".mysqli_errno($link).
-                      " - ".mysqli_error($link));
-                  }
-
-                  if (mysqli_num_rows($result) > 0) {
-                      // hasil query akan disimpan dalam variabel $data dalam bentuk array
-                      // kemudian dicetak dengan perulangan while
-                      while ($data = mysqli_fetch_assoc($result))
-                      {
-                          // mencetak / menampilkan data
+                  // Mengecek apakah baris data ditemukan
+                  if ($result->num_rows > 0) {
+                      // Ambil data dalam bentuk array asosiatif menggunakan fetch_assoc()
+                      while ($data = $result->fetch_assoc()) {
                           echo "<tr>";
-                          echo "<td>$data[idDosen]</td>"; //menampilkan data idDosen
-                          echo "<td>$data[namaDosen]</td>"; //menampilkan data namaDosen
-                          echo "<td>$data[noHP]</td>"; //menampilkan data noHP
-                          // membuat link untuk mengedit dan menghapus data
+                          echo "<td>" . htmlspecialchars($data['idDosen']) . "</td>";
+                          echo "<td>" . htmlspecialchars($data['namaDosen']) . "</td>";
+                          echo "<td>" . htmlspecialchars($data['noHP']) . "</td>";
                           echo '<td class="action-links">
                               <a href="editdosen.php?idDosen='.$data['idDosen'].'" class="btn btn-warning btn-sm">✏️ Edit</a>
                               <a href="hapusdosen.php?idDosen='.$data['idDosen'].'" class="btn btn-danger btn-sm"
@@ -102,3 +97,12 @@
     </div>
 </body>
 </html>
+<?php 
+  // Menutup statement dan koneksi di akhir siklus halaman setelah HTML selesai dimuat
+  if (isset($stmt)) {
+      $stmt->close();
+  }
+  if (isset($con)) {
+      $con->close();
+  }
+?>
